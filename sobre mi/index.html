@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <sergey-import src="head">
+    <sergey-template name="title">Sobre mi.. | Aqui cuento mi historia</sergey-template>
+  </sergey-import>
+</head>
+
+<body>
+  <sergey-import src="header">
+    <p>Links are a practical way to show your users where they are in your navigation. They're completely opt-in, so if you prefer to use classic <abbr title="HyperText Markup Language">HTML</abbr> links, go for it!</p>
+  </sergey-import>
+
+  <main class="insulate">
+    <div class="wrapper content">
+      hola sobre mi.....
+      <div id="contenedor" class="container"></div>
+  
+      <script>
+        function handleResponse(response) {
+          document.getElementById("contenedor").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
+        }
+      </script>
+       <script src= "https://www.googleapis.com/blogger/v3/blogs/3505424411293758897/pages/4682115597264116586?callback=handleResponse&key=AIzaSyAznQeQFTa5jZ7C6uZ_7mTMcU_9SOtsmLU"></script>
+    </div>
+  </main>
+
+  <sergey-import src="footer" />
+
+</body>
+</html>

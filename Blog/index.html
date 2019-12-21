@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <sergey-import src="head">
+    <sergey-template name="title">Blog|ultimas entradas del blog</sergey-template>
+  </sergey-import>
+</head>
+
+<body>
+  <sergey-import src="header">
+  </sergey-import>
+
+  <main class="insulate">
+    <div class="wrapper content">
+      <div id="contenedor" class="container"></div>
+  
+  <script>
+    function handleResponse(response) {
+      document.getElementById("contenedor").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
+    }
+  </script>
+   <script src= "https://www.googleapis.com/blogger/v3/blogs/3505424411293758897/posts/4471026552428633327?callback=handleResponse&key=AIzaSyAznQeQFTa5jZ7C6uZ_7mTMcU_9SOtsmLU"></script>
+  </main>
+
+  <sergey-import src="footer" />
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <sergey-import src="head">
+    <sergey-template name="title">Privado|contenido de usuarios</sergey-template>
+  </sergey-import>
+  <sergey-import src="head-privado" />
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-primary sticky-top">
+    <form onsubmit="return false">
+           <input class="form-control" type="text" id="email" name="email" placeholder="Email"/>
+ </form>
+   <button class="btn btn-warning btn-sm" id="quickstart-sign-in" name="signin">Iniciar sesión sin contraseña</button>
+<span id="quickstart-sign-in-status" class="badge badge-info">Desconocido</span>
+</nav>
+  <sergey-import src="header" />
+  <main class="wrapper">
+    <sergey-slot name="content" />
+    <div id="contenedor" class="container"></div>
+  
+    <script>
+      function handleResponse(response) {
+        document.getElementById("contenedor").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
+      }
+    </script>
+     <script src= "https://www.googleapis.com/blogger/v3/blogs/3505424411293758897/posts/4471026552428633327?callback=handleResponse&key=AIzaSyAznQeQFTa5jZ7C6uZ_7mTMcU_9SOtsmLU"></script>
+  </main>
+  <sergey-import src="footer" />
+</body>
+</html>
