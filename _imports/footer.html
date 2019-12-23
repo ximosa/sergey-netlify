@@ -37,14 +37,22 @@ Si usted quiere seriedad para su negocio, nosotros somos el camino a seguir. No 
           </div></div>
         <form name="contact" method="POST" data-netlify="true">
   <p>
-    <label>Nombre <input class="form-control" type="text" name="name" /></label>
+     <label>Su nombre: <input class="form-control"type="text" name="name" /></label>   
   </p>
   <p>
-    <label>Email <input  class="form-control" type="email" name="email" /></label>
+    <label>SU Email: <input class="form-control" type="email" name="email" /></label>
   </p>
-        <label>Mensaje  <textarea class="form-control"></textarea></label> 
   <p>
-    <button class="btn btn-success" type="submit">Enviar</button>
+    <label>Su roll : <select name="role[]" multiple>
+      <option value="leader">Lectorr</option>
+      <option value="follower">Usuario</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Mensaje: <textarea class="form-control" name="message"></textarea></label>
+  </p>
+  <p>
+    <button class="btn btn-success" type="submit">Send</button>
   </p>
 </form>
       </div>
